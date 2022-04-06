@@ -1,0 +1,114 @@
+#!/bin/bash
+export PATH="/usr/local/sbin:$PATH"
+#export PATH="/usr/local/opt/icu4c/bin:$PATH"
+#export PATH="$PATH:$HOME/.rvm/bin"
+#export PATH="$PATH:$HOME/.composer/vendor/bin"
+
+# system wide
+# -------------------------------------------------------------------------------------------------
+alias ..="cd ..; ls"
+alias ...="cd ../..; ls"
+alias version='echo nodejs;   node -v;   echo npm;   npm -v;   php -v;   docker -v;   zsh --version'
+alias lh='ls -a | egrep "^\."'
+alias l='ls -alh'
+alias h='cd ~'
+alias c='clear'
+alias x="exit"
+alias as='alias | grep '
+alias show="defaults write com.apple.Finder AppleShowAllFiles -bool true;  killall Finder"
+alias hide="defaults write com.apple.Finder AppleShowAllFiles -bool false;  killall Finder"
+alias et="rm -rfv ~/.Trash"
+alias ae="vi /Users/zhoux/.oh-my-zsh/aliases"
+alias au="source /Users/zhoux/.oh-my-zsh/aliases"
+alias ss='cat ~/.ssh/config'
+alias pw="pwgen"
+alias bi='brew install'
+alias bs='brew search'
+alias ce='export VISUAL=vim; crontab -e'
+alias restore_finder="cd ~/Library/Preferences;   sudo find com.apple.finder.plist* -exec rm {} \;;   killall Finder"
+
+# pathes
+# -------------------------------------------------------------------------------------------------
+alias github='cd ~/sites/github/' 
+alias myzsh='github; cd myzsh' 
+alias lidl='cd ~/lidl'
+alias sms='cd ~/lidl/carsales'
+alias sso='lidl; cd siam/ssomoc'
+alias stores='lidl; cd stores/stores.monorepo'
+alias fe='lidl; cd stores/stores_frontend'
+alias box='lidl; cd stores/storebox'
+alias utils='lidl; cd stores/utils'
+
+# tools 
+# -------------------------------------------------------------------------------------------------
+alias port="lsof -n -i4TCP:"
+alias pubip="curl -s checkip.dyndns.org | grep -Eo '[0-9\.]+'"
+alias ts='tig status'
+
+# yarn
+# -------------------------------------------------------------------------------------------------
+alias y='yarn'
+alias yi='yarn install'
+alias ys='yarn start'
+alias ya='yarn global add'
+alias yd='yarn deploy'
+
+# tree
+# -------------------------------------------------------------------------------------------------
+alias t='tree .'
+alias t2='tree -L 2 .'
+alias t3='tree -L 3 .'
+
+# Git
+# -------------------------------------------------------------------------------------------------
+alias gt='git tag '
+alias ga='git add '
+alias gp='git push'
+alias gap='git add .; git commit -m "updates"; git push'
+alias gst='git status'
+alias gm='git add .; git commit -m'
+
+alias gb='git branch'
+alias gbm='git branch -m '
+alias gbr='git branch -r'
+alias gba='git branch -v -a'
+
+alias gc='git checkout'
+alias gcb='git checkout -b '
+
+alias gu='git pull'
+alias gur='git pull --rebase'
+
+alias gcl='git clone'
+alias gf='git reflog'
+alias gl="git log --graph --decorate"
+alias greset='git reset --hard HEAD'
+alias gtags='git ls-remote --tags'
+
+alias gsl='git stash list'
+alias gss='git stash save '
+alias gsa='git stash apply'
+
+# docker-compose
+# -------------------------------------------------------------------------------------------------
+alias dstart='docker-compose start'
+alias dlogs='docker-compose logs -tf'
+alias dup='docker-compose up -d; dlogs'
+alias ddown="docker-compose down"
+alias dstop='docker-compose stop'
+
+# docker
+# -------------------------------------------------------------------------------------------------
+alias dps='docker ps'
+alias dia="docker images -a"
+alias drmi="docker rmi -f"
+alias drm="docker rm -f"
+
+# function
+# -------------------------------------------------------------------------------------------------
+cht() {
+  curl cheat.sh/"$1"
+}
+
+alias cflogin='cf login -a https://api.system.02.cf.eu01.stackit.schwarz --sso'
+alias cflogin-ext='cf login -a https://api.system.01.cf.eu01.stackit.cloud --sso  --sso --skip-ssl-validation'

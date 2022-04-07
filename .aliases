@@ -18,8 +18,8 @@ alias as='alias | grep '
 alias show="defaults write com.apple.Finder AppleShowAllFiles -bool true;  killall Finder"
 alias hide="defaults write com.apple.Finder AppleShowAllFiles -bool false;  killall Finder"
 alias et="rm -rfv ~/.Trash"
-alias ae="vi /Users/zhoux/.oh-my-zsh/aliases"
-alias au="source /Users/zhoux/.oh-my-zsh/aliases"
+alias ae="vi ~/.aliases"
+alias au="source ~/.aliases"
 alias ss='cat ~/.ssh/config'
 alias pw="pwgen"
 alias bi='brew install'
@@ -35,15 +35,19 @@ alias lidl='cd ~/lidl'
 alias sms='cd ~/lidl/carsales'
 alias sso='lidl; cd siam/ssomoc'
 alias stores='lidl; cd stores/stores.monorepo'
+alias storesapi='lidl; cd stores/stores.monorepo/component/openapi'
 alias fe='lidl; cd stores/stores_frontend'
 alias box='lidl; cd stores/storebox'
 alias utils='lidl; cd stores/utils'
 
 # tools 
 # -------------------------------------------------------------------------------------------------
-alias port="lsof -n -i4TCP:"
+alias port="lsof -n -i4TCP:$1"
 alias pubip="curl -s checkip.dyndns.org | grep -Eo '[0-9\.]+'"
 alias ts='tig status'
+alias github='cd ~/sites/github/' 
+alias myzsh='github; cd myzsh' 
+
 
 # yarn
 # -------------------------------------------------------------------------------------------------
@@ -109,6 +113,3 @@ alias drm="docker rm -f"
 cht() {
   curl cheat.sh/"$1"
 }
-
-alias cflogin='cf login -a https://api.system.02.cf.eu01.stackit.schwarz --sso'
-alias cflogin-ext='cf login -a https://api.system.01.cf.eu01.stackit.cloud --sso  --sso --skip-ssl-validation'

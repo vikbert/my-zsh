@@ -1,4 +1,5 @@
 export PATH=$HOME/bin:/usr/local/bin:/usr/local/bin:/usr/local/sbin:$PATH
+export PATH="/Users/zhoux/.composer/vendor/bin:$PATH"
 export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="robbyrussell"

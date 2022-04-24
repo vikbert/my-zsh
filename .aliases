@@ -41,6 +41,9 @@ alias of='ofd' # open finder location
 
 # pathes
 # -------------------------------------------------------------------------------------------------
+alias carsales='lidl; cd carsales'
+alias macup='github; cd macup; code .'
+alias dist='github; cd dist; code .'
 alias todos='cd /Users/zhoux/sites/github/todo-project'
 alias golang='cd /Users/zhoux/sites/github/go-project'
 alias mydev='cd /Users/zhoux/lidl/mydev.io; code .; pnpm run dev'

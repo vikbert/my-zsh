@@ -18,9 +18,24 @@
 ---
 
 ## Install 
+install `zsh`, see <https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH>
 ```bash
-
+brew install zsh
+chsh -s /usr/local/bin/zsh
+## or macOS High Sierra and older:
+chsh -s /bin/zsh
 ```
+
+install `oh-my-zsh`, see <https://ohmyz.sh/#install>
+```bash
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+check the state of `oh-my-zsh`
+```bash
+omz plugin list
+omz theme list
+```
+
 
 
 ## Minimal & Awesome looking
